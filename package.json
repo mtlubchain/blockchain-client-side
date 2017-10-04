@@ -2,8 +2,9 @@
   "name": "naivechain",
   "version": "1.0.0",
   "description": "my first blockchain app",
+  "main": "index.js",
   "scripts": {
-    "start": "node myfirstclient.js"
+    "start": "http-server -o -p 9999 -a localhost"
   },
   "dependencies": {
     "request": "^2.81.0"
