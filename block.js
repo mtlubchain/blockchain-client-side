@@ -7,6 +7,5 @@ class Block {
 		this.hash = data.hash;
 	}
 }
-
 module.exports = Block;
 
