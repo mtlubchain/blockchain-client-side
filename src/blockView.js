@@ -1,15 +1,15 @@
 (function (app) {
     class BlockView {
         constructor() {
-            console.log('hello from the BlockView');
+            this.container = document.querySelector('#blockchain-container');
         }
 
         render(res) {
-            let container = document.querySelector('#blockchain-container');
+            this.container.innerHTML = '';
             res.blockchain.forEach((item) => {
                 let itemjson = JSON.stringify(item);
-                container.innerHTML += `
-                <div>
+                this.container.innerHTML += `
+                <div class="row">
                     ${itemjson}
                 </div>
                 `

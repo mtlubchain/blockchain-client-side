@@ -6,13 +6,19 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <div id="add-block-container" class="panel-body">
-
-
-    </div>
-    <div id="blockchain-container" class="panel-body">
-
-    </div>
+        <div class="container-fluid">
+                <div class="col-xs-3">
+                    <div class="panel panel-primary">
+                        <div id="add-block-container" class="panel-body">...</div>
+                    </div>
+                </div>
+                <div class="col-xs-9">
+                    <div class="panel panel-primary">
+                        <div id="blockchain-container" class="panel-body"></div>
+                    </div>
+                </div>
+        </div>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="src/settings.js"></script>
     <script src="src/blockView.js"></script>
     <script src="src/addBlockView.js"></script>
