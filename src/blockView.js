@@ -5,8 +5,8 @@
         }
 
         render(res) {
-            let container = document.querySelector('#blockchain');
-            res.forEach((item) => {
+            let container = document.querySelector('#blockchain-container');
+            res.blockchain.forEach((item) => {
                 let itemjson = JSON.stringify(item);
                 container.innerHTML += `
                 <div>

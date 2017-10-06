@@ -1,21 +1,28 @@
 (function (app) {
-    // const request = require('request');
-    // const BlockModel = app.models.BlockModel;
-    // const BlockModel = require('./blockModel.js');
     class BlockService {
         constructor() {
-            console.log('hello from BlockService');
-        //     this.block = new BlockModel(0,"dupa0","dzisiaj","oto moje dane","smaz hasz");
-        //     console.log(block);
+            this.getUrl = 'http://localhost:3000/blockchain';
+            this.postUrl = 'http://localhost:3000/mineBlock';
         }
         fetch(renderCallback) {
             let xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
-            xhr.open('GET', 'http://localhost:3000/blockchain');
+            xhr.open('GET',this.getUrl);
             xhr.addEventListener('load', (res) => {
                 renderCallback(xhr.response);
             });
             xhr.send();
+        }
+
+        add(item, renderCallback) {
+            let xhr = new XMLHttpRequest();
+            xhr.responseType - 'json';
+            xhr.open('POST', this.postUrl);
+            xhr.setRequestHeader('Content-type', 'application/json');
+            xhr.addEventListener('load', (res) => {
+                renderCallback(res);
+            });
+            xhr.send(JSON.stringify(item));
         }
     }
     app.services.BlockService = BlockService;

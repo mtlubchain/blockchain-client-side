@@ -7,6 +7,7 @@
     "start": "http-server -o -p 9999 -a localhost"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "request": "^2.81.0"
   },
   "engines": {
